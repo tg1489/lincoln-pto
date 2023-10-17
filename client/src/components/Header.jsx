@@ -85,19 +85,19 @@ export default function Header({ isMobile }) {
                 {' '}
                 <li className='nav-item'>
                   {' '}
-                  <a className='dropdown-item' href='#'>
+                  <a className='nav-link' href='#'>
                     Fundraising
                   </a>
                 </li>
                 <li className='nav-item'>
                   {' '}
-                  <a className='dropdown-item' href='#'>
+                  <a className='nav-link' href='#'>
                     About Us
                   </a>
                 </li>
                 <li className='nav-item'>
                   {' '}
-                  <a className='dropdown-item' href='#'>
+                  <a className='nav-link' href='#'>
                     About Us
                   </a>
                 </li>
@@ -142,9 +142,7 @@ export default function Header({ isMobile }) {
           {/* Shopping Cart */}
           {isMobile ? (
             <li className='nav-item'>
-              <a className='nav-link' href='#'>
-                Shopping Cart
-              </a>
+              <img src={cart} className='shopping-cart-image mx-2' />
             </li>
           ) : (
             <img src={cart} className='shopping-cart-image mx-2' />
