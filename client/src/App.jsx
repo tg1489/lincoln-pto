@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Home from './components/Home';
+import Footer from './components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'react-bootstrap';
@@ -28,6 +29,7 @@ function App() {
     <>
       <Header isMobile={isMobile} />
       <Home isMobile={isMobile} />
+      <Footer isMobile={isMobile} />
     </>
   );
 }
