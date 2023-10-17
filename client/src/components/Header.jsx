@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import lion from '../assets/lion-logo2.png';
+import cart from '../assets/shopping-cart-outline-svgrepo-com.svg';
 import '../Header.css';
 
 export default function Header() {
@@ -41,7 +42,8 @@ export default function Header() {
 
         {/* Navbar */}
         <div className='collapse navbar-collapse' id='navbarNav'>
-          <ul className='navbar-nav nav-underline ml-auto'>
+          {/* TEMP ADDED COL */}
+          <ul className='col navbar-nav nav-underline ml-auto'>
             <li className='nav-item'>
               <a className='nav-link' href='#'>
                 Home
@@ -107,8 +109,10 @@ export default function Header() {
             </li>
           </ul>
           {/* Shopping Cart */}
-          {/* Profile Picture */}
+          <img src={cart} className='shopping-cart-image mx-2' />
+          {/* Profile Picture shows after login */}
           {/* Login */}
+          <span className='login'>Login</span>
         </div>
       </div>
     </nav>

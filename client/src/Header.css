@@ -50,3 +50,16 @@ a {
   --bs-bg-opacity: 1;
   background-color: var(--green) !important;
 }
+
+.shopping-cart-image {
+  height: 20.82px;
+  width: 25.11px;
+  cursor: pointer;
+}
+
+.login {
+  color: #fff;
+  cursor: pointer;
+}
+
+
