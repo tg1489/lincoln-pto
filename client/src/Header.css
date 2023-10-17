@@ -45,3 +45,8 @@ a {
 .column-navbar {
   padding-right: 1rem !important;
 }
+
+.green {
+  --bs-bg-opacity: 1;
+  background-color: var(--green) !important;
+}

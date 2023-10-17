@@ -20,20 +20,30 @@ export default function Header() {
   };
 
   return (
-    <>
-      <div className='row header'>
-        <div className='col-1'>
-          {/* Logo */}
+    <nav className='navbar navbar-expand-lg navbar-dark green'>
+      <div className='container-fluid'>
+        {/* Logo and School Name */}
+        <a className='col-1 navbar-brand' href='#'>
           <img src={lion} className='logo' alt='lincoln-lion-logo' />
-        </div>
-        {/* School Name */}
+        </a>
+
         <div className='col-3 school-name'>Lincoln Elementary PTO</div>
 
-        {/* Navbar Tabs */}
-        <div className='col-7 column-navbar'>
-          <ul className='nav nav-underline justify-content-end'>
+        {/* Mobile Hamburger Menu */}
+        <button
+          className='navbar-toggler'
+          type='button'
+          data-bs-toggle='collapse'
+          data-bs-target='#navbarNav'
+        >
+          <span className='navbar-toggler-icon'></span>
+        </button>
+
+        {/* Navbar */}
+        <div className='collapse navbar-collapse' id='navbarNav'>
+          <ul className='navbar-nav nav-underline ml-auto'>
             <li className='nav-item'>
-              <a className='nav-link' aria-current='page' href='#'>
+              <a className='nav-link' href='#'>
                 Home
               </a>
             </li>
@@ -63,28 +73,26 @@ export default function Header() {
               </a>
             </li>
 
-            {/* Dropdown More... Button */}
+            {/* More... Dropdown */}
             <li
               className={`nav-item dropdown ${isDropdownOpen ? 'show' : ''}`}
-              onMouseEnter={handleHover} // Show dropdown on hover
-              onMouseLeave={handleLeave} // Hide dropdown on mouse leave
+              onMouseEnter={handleHover}
+              onMouseLeave={handleLeave}
             >
               <a
                 className='nav-link dropdown-toggle'
                 href='#'
                 id='navbarDropdown'
                 role='button'
-                aria-haspopup='true'
-                aria-expanded='false'
               >
                 More...
               </a>
               <div
                 className={`dropdown-menu custom-fade ${
                   isDropdownOpen ? 'show' : ''
-                }`} // Apply custom-fade transition
+                }`}
                 aria-labelledby='navbarDropdown'
-                ref={dropdownRef} // Reference to the dropdown element
+                ref={dropdownRef}
               >
                 <a className='dropdown-item' href='#'>
                   Fundraising
@@ -98,8 +106,11 @@ export default function Header() {
               </div>
             </li>
           </ul>
+          {/* Shopping Cart */}
+          {/* Profile Picture */}
+          {/* Login */}
         </div>
       </div>
-    </>
+    </nav>
   );
 }
