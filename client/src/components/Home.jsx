@@ -4,6 +4,7 @@ import school from '../assets/school2.png';
 import sign from '../assets/sign2.png';
 import bookfair from '../assets/bookfair.png';
 import funday from '../assets/funday.png';
+// import membership from '../assets/membership.png';
 import '../Home.css';
 
 export default function Home({ isMobile }) {
@@ -40,7 +41,7 @@ export default function Home({ isMobile }) {
           </div>
         </Row>
         <Row className='mt-1'>
-          <h2 className='latest-news-title'>Our Latest News</h2>
+          <h2 className='title'>Our Latest News</h2>
         </Row>
         <Row className={`row-events mt-1 ${isMobile ? 'mobile-columns' : ''}`}>
           <Col className='mb-4'>
@@ -66,6 +67,27 @@ export default function Home({ isMobile }) {
               </Card.Body>
             </Card>
           </Col>
+        </Row>
+
+        <Row className='membership mt-5 mb-5'>
+          <div className='col-6'>
+            <p>
+              Membership gives all Lincoln Elementary students in your household
+              access to discounts for some events that the PTO sponsors for our
+              students. Your membership fee helps the PTO fund many educational
+              and social programs throughout the year for our children.
+            </p>
+            <p>
+              Please complete the membership form before proceeding with your
+              payment. Memberships require both form submission and payment.
+              Thank you!
+            </p>
+            <div><span className='membership-link'>Click Here</span></div>
+          </div>
+          <div className='col-6'>
+            <h2 className='title'>Join Us</h2>
+            <img src={school} className='membership-image' />
+          </div>
         </Row>
       </Container>
     </>

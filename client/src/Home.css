@@ -14,9 +14,21 @@
   flex-direction: column !important;
 }
 
-h2.latest-news-title {
+h2.title {
   /* font-family: 'Placard Condensed', sans-serif; */
   font-family: 'Zidan', sans-serif;
   font-size: 46px;
 }
 
+div.membership {
+}
+
+img.membership-image {
+  width: 300px;
+  height: 300px;
+}
+
+span.membership-link {
+  font-size: 20px;
+  cursor: pointer;
+}
