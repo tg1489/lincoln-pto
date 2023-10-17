@@ -4,10 +4,11 @@
   --bs-gutter-x: 0 !important;
 }
 
-.top-row {
+.nested-row {
   align-items: flex-start !important;
 }
-.nav {
+
+.nav-items {
   /* display: flex;
   padding-left: 0;
   margin-bottom: 0;
@@ -18,7 +19,6 @@
 }
 
 .row {
-  border: 1px solid white;
   flex-wrap: nowrap;
   align-items: center;
 }

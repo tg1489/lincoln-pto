@@ -37,6 +37,7 @@ body {
   margin: 0;
   background-color: #fff;
   color: #000;
+  overflow-x: hidden;
   /* min-height: 100vh; */
 }
 

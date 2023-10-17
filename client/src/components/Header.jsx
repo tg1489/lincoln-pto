@@ -1,68 +1,105 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import lion from '../assets/lion-logo2.png';
 import '../Header.css';
 
 export default function Header() {
+  // Create a ref to the dropdown element
+  const dropdownRef = useRef(null);
+
+  // Function to show the dropdown on hover
+  const handleHover = () => {
+    if (dropdownRef.current) {
+      dropdownRef.current.classList.add('show');
+    }
+  };
+
+  // Function to hide the dropdown when the mouse leaves
+  const handleLeave = () => {
+    if (dropdownRef.current) {
+      dropdownRef.current.classList.remove('show');
+    }
+  };
+
   return (
     <>
       <div className='row header'>
         <div className='col-1'>
+          {/* Logo */}
           <img src={lion} className='logo' alt='lincoln-lion-logo' />
         </div>
-        <div className='col school-name'>Lincoln Elementary PTO</div>
+        {/* School Name */}
+        <div className='col-3 school-name'>Lincoln Elementary PTO</div>
+
+        {/* Navbar Tabs */}
         <div className='col'>
-          <div className='row'>
-            <div className='col'>Home</div>
-            <div className='col'>Home</div>
-            <div className='col'>Home</div>
-          </div>
+          <ul className='nav justify-content-end'>
+            <li className='nav-item'>
+              <a className='nav-link active' aria-current='page' href='#'>
+                Home
+              </a>
+            </li>
+            <li className='nav-item'>
+              <a className='nav-link' href='#'>
+                PTO Meeting Schedule
+              </a>
+            </li>
+            <li className='nav-item'>
+              <a className='nav-link' href='#'>
+                Birthdays
+              </a>
+            </li>
+            <li className='nav-item'>
+              <a className='nav-link' href='#'>
+                Store
+              </a>
+            </li>
+            <li className='nav-item'>
+              <a className='nav-link' href='#'>
+                Volunteers
+              </a>
+            </li>
+            <li className='nav-item'>
+              <a className='nav-link' href='#'>
+                Events
+              </a>
+            </li>
+
+            {/* Dropdown More... Button */}
+            <li
+              className='nav-item dropdown'
+              onMouseEnter={handleHover} // Show dropdown on hover
+              onMouseLeave={handleLeave} // Hide dropdown on mouse leave
+            >
+              <a
+                className='nav-link dropdown-toggle'
+                href='#'
+                id='navbarDropdown'
+                role='button'
+                data-bs-toggle='dropdown'
+                aria-haspopup='true'
+                aria-expanded='false'
+              >
+                More...
+              </a>
+              <div
+                className='dropdown-menu'
+                aria-labelledby='navbarDropdown'
+                ref={dropdownRef} // Reference to the dropdown element
+              >
+                <a className='dropdown-item' href='#'>
+                  Item 1
+                </a>
+                <a className='dropdown-item' href='#'>
+                  Item 2
+                </a>
+                <a className='dropdown-item' href='#'>
+                  Item 3
+                </a>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </>
   );
 }
-
-/*
-
-
-
-
-
-
-<nav className='nav navbar navbar-expand-sm mb-3'>
-        <div className='container-fluid'>
-          <div className='row'></div>
-          <div className='navbar-brand'>
-            <img src={lion} className='logo' alt='lincoln-lion-logo' />
-          </div>
-
-          <span>Lincoln Elementary PTO</span>
-        </div>
-      </nav>
-
-
-
-
-
-
-
-
-
-
-
- <div className='col'>Home</div>
-            <div className='col'>PTO Meeting Schedule</div>
-            <div className='col'>Birthdays</div>
-            <div className='col'>Store</div>
-            <div className='col'>Volunteers</div>
-            <div className='col'>Events</div>
-            <div className='col'>Fundraising</div>
-            <div className='col'>About Us</div>
-            <div className='col'>Contact Us</div>
-            <img />
-            <img />
-            <div className='col'>Login</div>
-          </div>
-
-
-*/
