@@ -49,9 +49,7 @@ export default function Home({ isMobile }) {
               <Card.Img src={bookfair}></Card.Img>
               <Card.Body>
                 <Card.Title>Book Fair</Card.Title>
-                <Card.Subtitle>
-                  October 2nd-6th, 2023 February 20th-23rd, 2024
-                </Card.Subtitle>
+                <Card.Subtitle>February 20th-23rd, 2024</Card.Subtitle>
                 <Card.Subtitle>
                   April (Dates TBD) (Buy 1 Get 1 Free)
                 </Card.Subtitle>
@@ -63,7 +61,7 @@ export default function Home({ isMobile }) {
               <Card.Img src={funday}></Card.Img>
               <Card.Body>
                 <Card.Title>Funday</Card.Title>
-                <Card.Subtitle>November 16th</Card.Subtitle>
+                <Card.Subtitle>Dates (TBD)</Card.Subtitle>
                 <Card.Text>Click to volunteer for Funday</Card.Text>
               </Card.Body>
             </Card>
