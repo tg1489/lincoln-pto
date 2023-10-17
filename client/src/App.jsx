@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Header from './components/Header';
+import Home from './components/Home';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'react-bootstrap';
@@ -25,7 +26,7 @@ function App() {
   return (
     <>
       <Header isMobile={isMobile} />
-      <h3>WeLCoMe 2 liNC0lnn skOoL</h3>
+      <Home />
     </>
   );
 }
