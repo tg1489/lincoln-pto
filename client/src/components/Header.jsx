@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import lion from '../assets/lion-logo2.png';
 import '../Header.css';
 
@@ -6,18 +6,17 @@ export default function Header() {
   // Create a ref to the dropdown element
   const dropdownRef = useRef(null);
 
+  // State to control the visibility of the dropdown
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
   // Function to show the dropdown on hover
   const handleHover = () => {
-    if (dropdownRef.current) {
-      dropdownRef.current.classList.add('show');
-    }
+    setIsDropdownOpen(true);
   };
 
   // Function to hide the dropdown when the mouse leaves
   const handleLeave = () => {
-    if (dropdownRef.current) {
-      dropdownRef.current.classList.remove('show');
-    }
+    setIsDropdownOpen(false);
   };
 
   return (
@@ -66,7 +65,7 @@ export default function Header() {
 
             {/* Dropdown More... Button */}
             <li
-              className='nav-item dropdown'
+              className={`nav-item dropdown ${isDropdownOpen ? 'show' : ''}`}
               onMouseEnter={handleHover} // Show dropdown on hover
               onMouseLeave={handleLeave} // Hide dropdown on mouse leave
             >
@@ -75,14 +74,15 @@ export default function Header() {
                 href='#'
                 id='navbarDropdown'
                 role='button'
-                data-bs-toggle='dropdown'
                 aria-haspopup='true'
                 aria-expanded='false'
               >
                 More...
               </a>
               <div
-                className='dropdown-menu'
+                className={`dropdown-menu custom-fade ${
+                  isDropdownOpen ? 'show' : ''
+                }`} // Apply custom-fade transition
                 aria-labelledby='navbarDropdown'
                 ref={dropdownRef} // Reference to the dropdown element
               >
