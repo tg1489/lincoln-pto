@@ -1,3 +1,14 @@
 nav.footer {
   color: #fff;
 }
+
+.social-media-icons {
+  height: 48px;
+  width: 48px;
+  cursor: pointer;
+}
+
+.navbar {
+  justify-content: center !important;
+}
+

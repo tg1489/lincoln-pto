@@ -32,3 +32,7 @@ span.membership-link {
   font-size: 20px;
   cursor: pointer;
 }
+
+.mobile-row {
+  flex-direction: column !important;
+}
