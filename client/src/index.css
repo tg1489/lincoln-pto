@@ -68,3 +68,60 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+/* Fix header from displaying jumbled up letters */
+@media (max-width: 1228px) {
+  .nav-link {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 1211px) {
+  .nav-link {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1136px) {
+  .nav-link {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 1119px) {
+  .nav-link {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 1088px) {
+  .nav-link {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 1073px) {
+  .nav-link {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 1047px) {
+  .nav-link {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 1028px) {
+  .nav-link {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 998px) {
+  .nav-link {
+    font-size: 10px;
+  }
+}
+
+/* 576px */

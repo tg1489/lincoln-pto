@@ -1,7 +1,22 @@
+@import url('https://fonts.cdnfonts.com/css/placard-condensed');
+@import url('https://fonts.cdnfonts.com/css/zidan');
+
 .main-picture {
+  height: 400px;
+  width: 300px;
 }
 
 .row-events {
-  /* border: 1px solid red; */
   align-items: flex-start;
 }
+
+.mobile-columns {
+  flex-direction: column !important;
+}
+
+h2.latest-news-title {
+  /* font-family: 'Placard Condensed', sans-serif; */
+  font-family: 'Zidan', sans-serif;
+  font-size: 46px;
+}
+
