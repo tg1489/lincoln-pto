@@ -3,7 +3,7 @@ import lion from '../assets/lion-logo2.png';
 import cart from '../assets/shopping-cart-outline-svgrepo-com.svg';
 import '../Header.css';
 
-export default function Header() {
+export default function Header({ isMobile }) {
   // Create a ref to the dropdown element
   const dropdownRef = useRef(null);
 
@@ -43,7 +43,11 @@ export default function Header() {
         {/* Navbar */}
         <div className='collapse navbar-collapse' id='navbarNav'>
           {/* TEMP ADDED COL */}
-          <ul className='col navbar-nav nav-underline ml-auto'>
+          <ul
+            className={`col navbar-nav ml-auto ${
+              isMobile ? '' : 'nav-underline'
+            }`}
+          >
             <li className='nav-item'>
               <a className='nav-link' href='#'>
                 Home
@@ -74,7 +78,6 @@ export default function Header() {
                 Events
               </a>
             </li>
-
             {/* More... Dropdown */}
             <li
               className={`nav-item dropdown ${isDropdownOpen ? 'show' : ''}`}
@@ -90,9 +93,7 @@ export default function Header() {
                 More...
               </a>
               <div
-                className={`dropdown-menu custom-fade ${
-                  isDropdownOpen ? 'show' : ''
-                }`}
+                className={`dropdown-menu ${isDropdownOpen ? 'show' : ''}`}
                 aria-labelledby='navbarDropdown'
                 ref={dropdownRef}
               >
@@ -109,7 +110,16 @@ export default function Header() {
             </li>
           </ul>
           {/* Shopping Cart */}
-          <img src={cart} className='shopping-cart-image mx-2' />
+          {isMobile ? (
+            <li className='nav-item'>
+              <a className='nav-link' href='#'>
+                Shopping Cart
+              </a>
+            </li>
+          ) : (
+            <img src={cart} className='shopping-cart-image mx-2' />
+          )}
+
           {/* Profile Picture shows after login */}
           {/* Login */}
           <span className='login'>Login</span>

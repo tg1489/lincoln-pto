@@ -1,3 +1,7 @@
+li {
+  list-style-type: none;
+}
+
 li > a {
   color: var(--yellow) !important;
 }
@@ -61,5 +65,3 @@ a {
   color: #fff;
   cursor: pointer;
 }
-
-
