@@ -1,8 +1,12 @@
 .header {
   background-color: var(--green) !important;
   height: 97px;
+  --bs-gutter-x: 0 !important;
 }
 
+.top-row {
+  align-items: flex-start !important;
+}
 .nav {
   /* display: flex;
   padding-left: 0;

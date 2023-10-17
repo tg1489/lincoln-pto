@@ -5,28 +5,17 @@ import '../Header.css';
 export default function Header() {
   return (
     <>
-      <div className='container-fluid header'>
-        <div className='row'>
-          <div className='col'>
-            <span>Home</span>
-            <span>PTO Meeting Schedule</span>
-            <span>Birthdays</span>
-            <span>Store</span>
-            <span>Volunteers</span>
-            <span>Events</span>
-            <span>Fundraising</span>
-            <span>About Us</span>
-            <span>Contact Us</span>
-            <img />
-            <img />
-            <span>Login</span>
-          </div>
+      <div className='row header'>
+        <div className='col-1'>
+          <img src={lion} className='logo' alt='lincoln-lion-logo' />
         </div>
-        <div className='row'>
-          <div className='col-1'>
-            <img src={lion} className='logo' alt='lincoln-lion-logo' />
+        <div className='col school-name'>Lincoln Elementary PTO</div>
+        <div className='col'>
+          <div className='row'>
+            <div className='col'>Home</div>
+            <div className='col'>Home</div>
+            <div className='col'>Home</div>
           </div>
-          <div className='col-3 school-name'>Lincoln Elementary PTO</div>
         </div>
       </div>
     </>
