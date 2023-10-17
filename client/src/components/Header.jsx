@@ -30,10 +30,10 @@ export default function Header() {
         <div className='col-3 school-name'>Lincoln Elementary PTO</div>
 
         {/* Navbar Tabs */}
-        <div className='col'>
-          <ul className='nav justify-content-end'>
+        <div className='col-7 column-navbar'>
+          <ul className='nav nav-underline justify-content-end'>
             <li className='nav-item'>
-              <a className='nav-link active' aria-current='page' href='#'>
+              <a className='nav-link' aria-current='page' href='#'>
                 Home
               </a>
             </li>
@@ -87,13 +87,13 @@ export default function Header() {
                 ref={dropdownRef} // Reference to the dropdown element
               >
                 <a className='dropdown-item' href='#'>
-                  Item 1
+                  Fundraising
                 </a>
                 <a className='dropdown-item' href='#'>
-                  Item 2
+                  About Us
                 </a>
                 <a className='dropdown-item' href='#'>
-                  Item 3
+                  Contact Us
                 </a>
               </div>
             </li>

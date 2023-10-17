@@ -1,3 +1,21 @@
+li > a {
+  color: var(--yellow) !important;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+  transition: color 0.3s !important;
+}
+a:hover {
+  color: #fee876 !important;
+}
+
+a {
+  transition: color 4.2 !important;
+}
+
 .header {
   background-color: var(--green) !important;
   height: 97px;
@@ -6,16 +24,6 @@
 
 .nested-row {
   align-items: flex-start !important;
-}
-
-.nav-items {
-  /* display: flex;
-  padding-left: 0;
-  margin-bottom: 0;
-  list-style: none;
-  justify-content: flex-start;
-  align-items: center;
-  flex-wrap: wrap; */
 }
 
 .row {
@@ -32,4 +40,8 @@
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: #fff;
   font-size: 22px;
+}
+
+.column-navbar {
+  padding-right: 1rem !important;
 }
