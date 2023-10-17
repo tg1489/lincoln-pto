@@ -79,35 +79,65 @@ export default function Header({ isMobile }) {
               </a>
             </li>
             {/* More... Dropdown */}
-            <li
-              className={`nav-item dropdown ${isDropdownOpen ? 'show' : ''}`}
-              onMouseEnter={handleHover}
-              onMouseLeave={handleLeave}
-            >
-              <a
-                className='nav-link dropdown-toggle'
-                href='#'
-                id='navbarDropdown'
-                role='button'
-              >
-                More...
-              </a>
-              <div
-                className={`dropdown-menu ${isDropdownOpen ? 'show' : ''}`}
-                aria-labelledby='navbarDropdown'
-                ref={dropdownRef}
-              >
-                <a className='dropdown-item' href='#'>
-                  Fundraising
-                </a>
-                <a className='dropdown-item' href='#'>
-                  About Us
-                </a>
-                <a className='dropdown-item' href='#'>
-                  Contact Us
-                </a>
-              </div>
-            </li>
+            {/* 991.33px */}
+            {isMobile ? (
+              <>
+                {' '}
+                <li className='nav-item'>
+                  {' '}
+                  <a className='dropdown-item' href='#'>
+                    Fundraising
+                  </a>
+                </li>
+                <li className='nav-item'>
+                  {' '}
+                  <a className='dropdown-item' href='#'>
+                    About Us
+                  </a>
+                </li>
+                <li className='nav-item'>
+                  {' '}
+                  <a className='dropdown-item' href='#'>
+                    About Us
+                  </a>
+                </li>
+              </>
+            ) : (
+              <>
+                {' '}
+                <li
+                  className={`nav-item dropdown ${
+                    isDropdownOpen ? 'show' : ''
+                  }`}
+                  onMouseEnter={handleHover}
+                  onMouseLeave={handleLeave}
+                >
+                  <a
+                    className='nav-link dropdown-toggle'
+                    href='#'
+                    id='navbarDropdown'
+                    role='button'
+                  >
+                    More...
+                  </a>
+                  <div
+                    className={`dropdown-menu ${isDropdownOpen ? 'show' : ''}`}
+                    aria-labelledby='navbarDropdown'
+                    ref={dropdownRef}
+                  >
+                    <a className='dropdown-item' href='#'>
+                      Fundraising
+                    </a>
+                    <a className='dropdown-item' href='#'>
+                      About Us
+                    </a>
+                    <a className='dropdown-item' href='#'>
+                      Contact Us
+                    </a>
+                  </div>
+                </li>
+              </>
+            )}
           </ul>
           {/* Shopping Cart */}
           {isMobile ? (
