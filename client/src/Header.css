@@ -1,0 +1,31 @@
+.header {
+  background-color: var(--green) !important;
+  height: 97px;
+}
+
+.nav {
+  /* display: flex;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap; */
+}
+
+.row {
+  border: 1px solid white;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.logo {
+  height: 67px;
+  width: 60px;
+}
+
+.school-name {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #fff;
+  font-size: 22px;
+}
