@@ -74,7 +74,7 @@ export default function Home({ isMobile }) {
             <>
               <div className='col'>
                 <h2 className='title'>Join Us</h2>
-                <img src={school} className='membership-image' />
+                <img src={school} className='membership-image mb-2' />
               </div>
 
               <div className='col'>

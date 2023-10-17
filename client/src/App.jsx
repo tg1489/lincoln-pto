@@ -8,7 +8,22 @@ import 'react-bootstrap';
 import './App.css';
 
 function App() {
+  const [currentPage, setCurrentPage] = useState('home');
   const [isMobile, setIsMobile] = useState(false);
+
+  // Page Changes
+  const handlePageChange = (page) => setCurrentPage(page);
+
+  // SPA Switch
+  const render = () => {
+    switch (currentPage) {
+      case 'home':
+        return <Home isMobile={isMobile} />;
+
+      default:
+        return <Home isMobile={isMobile} />;
+    }
+  };
 
   // Mobile
   useEffect(() => {
@@ -27,8 +42,12 @@ function App() {
   });
   return (
     <>
-      <Header isMobile={isMobile} />
-      <Home isMobile={isMobile} />
+      <Header
+        isMobile={isMobile}
+        currentPage={currentPage}
+        handlePageChange={handlePageChange}
+      />
+      {render()}
       <Footer isMobile={isMobile} />
     </>
   );
