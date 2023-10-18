@@ -123,3 +123,10 @@ button:focus-visible {
     font-size: 10px;
   }
 }
+
+.footer {
+  text-align: center;
+  position: relative; /* Ensure relative positioning */
+  margin-top: auto; /* Push the footer to the bottom */
+}
+

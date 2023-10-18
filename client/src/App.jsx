@@ -72,7 +72,7 @@ function App() {
         handlePageChange={handlePageChange}
       />
       {render()}
-      <Footer isMobile={isMobile} />
+      <Footer className='footer' isMobile={isMobile} />
     </>
   );
 }

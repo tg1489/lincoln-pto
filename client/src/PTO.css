@@ -1,0 +1,23 @@
+@import url('https://fonts.cdnfonts.com/css/chalktastic');
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+}
+
+/* Content element within the container */
+.content {
+  flex: 1; /* Allow the content to grow to fill available space */
+}
+
+.chalkboard {
+  width: 800px;
+  height: 486px;
+  font-family: 'Chalktastic', sans-serif;
+  color: #fff;
+  font-size: 36px;
+  background-image: url('./assets/chalkboard.png');
+  background-repeat: no-repeat;
+}
