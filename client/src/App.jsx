@@ -1,6 +1,14 @@
 import { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Home from './components/Home';
+import About from './components/About.jsx';
+import Contact from './components/Contact.jsx';
+import Events from './components/Events.jsx';
+import Fundraising from './components/Fundraising.jsx';
+import Volunteers from './components/Volunteers.jsx';
+import PTO from './components/PTO';
+import Birthdays from './components/Birthdays';
+import Store from './components/Store';
 import Footer from './components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
@@ -19,6 +27,22 @@ function App() {
     switch (currentPage) {
       case 'home':
         return <Home isMobile={isMobile} />;
+      case 'pto':
+        return <PTO isMobile={isMobile} />;
+      case 'birthdays':
+        return <Birthdays isMobile={isMobile} />;
+      case 'contact':
+        return <Contact isMobile={isMobile} />;
+      case 'events':
+        return <Events isMobile={isMobile} />;
+      case 'fundraising':
+        return <Fundraising isMobile={isMobile} />;
+      case 'store':
+        return <Store isMobile={isMobile} />;
+      case 'volunteers':
+        return <Volunteers isMobile={isMobile} />;
+      case 'about':
+        return <About isMobile={isMobile} />;
 
       default:
         return <Home isMobile={isMobile} />;
