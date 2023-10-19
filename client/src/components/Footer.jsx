@@ -10,7 +10,7 @@ import '../Footer.css';
 export default function Footer() {
   return (
     <div>
-      <nav class='navbar navbar-dark bg-dark footer'>
+      <nav className='navbar navbar-dark bg-dark footer'>
         <img className='social-media-icons mx-1' src={email} />
         <img className='social-media-icons mx-1' src={facebook} />
         <img className='social-media-icons mx-1' src={twitter} />
