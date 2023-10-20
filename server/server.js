@@ -90,12 +90,12 @@ app.get('/', (req, res) => {
 });
 
 // Need this API in order to use .env on the client side for { React }
-app.get('/api/keys', async (req, res) => {
-  const rapidKey = process.env.RAPID_API;
-  const rawgKey = process.env.RAWG_API;
+// app.get('/api/keys', async (req, res) => {
+//   const rapidKey = process.env.RAPID_API;
+//   const rawgKey = process.env.RAWG_API;
 
-  res.json({ rapidKey, rawgKey });
-});
+//   res.json({ rapidKey, rawgKey });
+// });
 
 const startApolloServer = async () => {
   // Starting GraphQL Apollo Server
