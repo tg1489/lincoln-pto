@@ -5,7 +5,7 @@
   "main": "client/index.html",
   "scripts": {
     "heroku-prebuild": "npm install -g pnpm",
-    "build": "pnpm build",
+    "build": "vite build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "cd client && pnpm run dev",
     "watch": "cd server && pnpm run watch",
