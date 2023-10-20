@@ -10,10 +10,37 @@ import PTO from './components/PTO';
 import Birthdays from './components/Birthdays';
 import Store from './components/Store';
 import Footer from './components/Footer';
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  createHttpLink,
+} from '@apollo/client';
+import { setContext } from '@apollo/client/link/context';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'react-bootstrap';
 import './App.css';
+
+// Endpoint for GraphQL
+const httpLink = createHttpLink({
+  uri: 'http://localhost:3001/graphql',
+});
+
+// JWT Authorization Header Middleware For Every Request
+const authLink = setContext((_, { headers }) => {
+  // Get token from localStorage if available
+  const token = localStorage.getItem('id_token');
+  // Return "headers" to the context so httpLink can read them
+  return {
+    headers: { ...headers, authorization: token ? `Bearer ${token}` : '' },
+  };
+});
+
+const client = new ApolloClient({
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache(),
+});
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -66,13 +93,15 @@ function App() {
   });
   return (
     <>
-      <Header
-        isMobile={isMobile}
-        currentPage={currentPage}
-        handlePageChange={handlePageChange}
-      />
-      {render()}
-      <Footer className='footer' isMobile={isMobile} />
+      <ApolloProvider client={client}>
+        <Header
+          isMobile={isMobile}
+          currentPage={currentPage}
+          handlePageChange={handlePageChange}
+        />
+        {render()}
+        <Footer className='footer' isMobile={isMobile} />
+      </ApolloProvider>
     </>
   );
 }
