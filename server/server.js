@@ -89,16 +89,6 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/dist/index.html'));
 });
 
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/dist/assets/index-7bf0e15f.js'));
-});
-
-app.get('/', (req, res) => {
-  res.sendFile(
-    path.join(__dirname, '../client/dist/assets/index-8724b36d.css')
-  );
-});
-
 // Need this API in order to use .env on the client side for { React }
 // app.get('/api/keys', async (req, res) => {
 //   const rapidKey = process.env.RAPID_API;
