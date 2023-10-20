@@ -35,7 +35,7 @@ app.use(cors(corsOptions));
 
 // Production Mode
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../client/build')));
+  app.use(express.static(path.join(__dirname, '../client/dist')));
 }
 
 // S3 client for image uploads
