@@ -1,16 +1,18 @@
-const db = require('../config/connection');
+const path = require('path');
+require('dotenv').config({ path: path.join(__dirname, '../.env') });
+const sequelize = require('../config/connection');
+
 const User = require('../models/User');
 
-const userSeeds = require('./userSeeds.json');
+const userSeedData = require('./userSeeds.json');
 
-db.once('open', async () => {
-  try {
-    await User.deleteMany({});
-    await User.create(userSeeds);
+const seedDatabase = () => {
+  return sequelize.sync({ force: true }).then(() => {
+    User.bulkCreate(userSeedData).then(() => {
+      console.log('🍓 Seeds planted in User table');
+      process.exit(0);
+    });
+  });
+};
 
-    console.log('all done!');
-    process.exit(0);
-  } catch (err) {
-    throw err;
-  }
-});
+seedDatabase();
