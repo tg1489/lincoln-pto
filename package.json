@@ -2,7 +2,7 @@
   "name": "lincoln-pto",
   "version": "1.0.0",
   "description": "",
-  "main": "client/index.html",
+  "main": "server/server.js",
   "engines": {
     "node": "v18.14.2"
   },
