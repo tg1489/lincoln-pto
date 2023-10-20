@@ -36,16 +36,28 @@ const startApolloServer = async () => {
   await server.start();
   server.applyMiddleware({ app });
 
-  // Starting Database After GraphQL
-  sequelize.sync({ force: false }).then(() => {
-    // Starting Express Server after GraphQL & Database
+  // 2.) Open MongoDB Server:
+  sequelize.once('open', () => {
+    // 3.) Start Node.js Express Server:
     app.listen(PORT, () => {
-      console.log(`API server running on port ${PORT}!`);
+      console.log(`🌍 Now listening on localhost:${PORT}`);
       console.log(
         `Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`
       );
     });
   });
 };
+
+//   // Starting Database After GraphQL
+//   sequelize.sync({ force: false }).then(() => {
+//     // Starting Express Server after GraphQL & Database
+//     app.listen(PORT, () => {
+//       console.log(`API server running on port ${PORT}!`);
+//       console.log(
+//         `Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`
+//       );
+//     });
+//   });
+// };
 
 startApolloServer();
