@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "client/index.html",
+  "engines": {
+    "node": "v18.14.2"
+  },
   "scripts": {
     "heroku-prebuild": "npm install -g pnpm",
     "postinstall": "cd client && npm run build",
